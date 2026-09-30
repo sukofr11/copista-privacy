@@ -1,66 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Copista: política de privacidad</title>
+<title>Política de privacidad · Copista</title>
 <style>
-body{font-family:system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.55;color:#1b1b1b;background:#fff}
-h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8em}
-small{color:#555}
+  :root { --text: #1c1b1f; --muted: #5f5c66; --bg: #f7f6fb; --card: #ffffff; --line: #e2e0ea; --accent: #2b3a8f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #e6e3ec; --muted: #aba7b5; --bg: #131218; --card: #1c1b22; --line: #34323d; --accent: #aebcff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; }
+  p, li { margin: 0 0 10px; }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); margin-bottom: 24px; }
+  .summary { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; }
+  .summary p:last-child { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
+<main>
 <h1>Política de privacidad de Copista</h1>
-<p><small>Última actualización: 28 de septiembre de 2026</small></p>
-
+<p class="meta">Última actualización: 30 de septiembre de 2026 · <a href="#en">English</a></p>
 <p>Copista (paquete <code>com.copista.scanner</code>) es un escáner de documentos para Android publicado por Mydego. Esta política explica qué datos trata la app.</p>
 
-<h2>Resumen</h2>
-<p>Copista no tiene cuentas de usuario ni servidores propios. Los documentos que escaneas, el texto reconocido, las firmas y las carpetas se guardan solo en tu móvil. No vendemos ni compartimos tus datos.</p>
+<div class="summary">
+  <p><strong>En resumen:</strong> tus documentos, fotos, textos reconocidos y firmas se guardan solo en tu móvil. No tenemos servidores, no pedimos cuenta y nunca vemos ni recibimos tus documentos.</p>
+  <p>La versión gratuita muestra anuncios de Google AdMob. Para mostrarlos, Google recibe datos técnicos de tu dispositivo, y solo los usa para anuncios personalizados si das tu consentimiento. Con Copista Pro no hay anuncios y la app no se conecta a los servicios de anuncios.</p>
+</div>
 
-<h2>Documentos y contenido</h2>
+<h2>1. Responsable</h2>
+<p>F. Delgado, con NIF 47763143D y domicilio en 43710 Santa Oliva (Tarragona), es el responsable de la app Copista. Contacto para cualquier cuestión de privacidad: <a href="mailto:mydegollc@gmail.com">mydegollc@gmail.com</a>.</p>
+
+<h2>2. Tus documentos se quedan en tu móvil</h2>
 <ul>
-<li>Las fotos de las páginas, el texto reconocido (OCR), los datos extraídos de tickets y facturas y las firmas se procesan y guardan en el almacenamiento interno de la app, en tu dispositivo.</li>
-<li>Las carpetas cifradas se protegen con AES-256-GCM y una clave del Android Keystore que solo se desbloquea con tu huella, cara o PIN.</li>
-<li>La app no hace copias de seguridad en la nube. Si la desinstalas, sus documentos se borran.</li>
-<li>Los documentos solo salen del móvil cuando tú los compartes o exportas a otra app.</li>
+  <li>Las páginas escaneadas, los PDF, el texto reconocido (OCR), las firmas y las carpetas se guardan en el almacenamiento privado de la app, al que otras apps no pueden acceder.</li>
+  <li>El escaneo y el reconocimiento de texto se hacen en el propio móvil, con las herramientas de Google Play Services (ML Kit). Las imágenes no se envían a ningún servidor.</li>
+  <li>Las carpetas cifradas protegen su contenido con cifrado AES-256. La clave está guardada en el hardware seguro del móvil (Android Keystore) y se desbloquea con tu huella, tu cara o tu PIN. Nunca recibimos tu huella ni tu PIN: los gestiona Android.</li>
+  <li>La app no hace copias de seguridad en la nube ni permite transferir sus datos a otro móvil. Si desinstalas la app, sus documentos se borran.</li>
+  <li>Un documento solo sale del móvil cuando tú decides compartirlo o exportarlo. En ese caso, lo recibe la app o el destino que elijas.</li>
 </ul>
 
-<h2>Permisos</h2>
+<h2>3. Datos que tratan terceros</h2>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Servicio</th><th>Para qué</th><th>Qué datos</th><th>Base legal</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google AdMob y la plataforma de consentimiento de Google (solo versión gratuita)</td>
+      <td>Mostrar anuncios, medirlos y evitar el fraude. Personalizarlos solo si lo aceptas.</td>
+      <td>ID de publicidad, dirección IP y la ubicación aproximada que se deduce de ella, modelo y sistema del dispositivo, idioma, interacciones con los anuncios y datos de diagnóstico del SDK. Nunca tus documentos.</td>
+      <td>Tu consentimiento, para guardar o leer información en el dispositivo y para personalizar los anuncios. Interés legítimo, para mostrar anuncios limitados sin esa información y para prevenir el fraude.</td>
+    </tr>
+    <tr>
+      <td>Google Play (compra de Copista Pro)</td>
+      <td>Procesar el pago y comprobar que la compra es válida.</td>
+      <td>Google gestiona el pago con tu cuenta de Google. Nosotros solo recibimos si la compra existe; no vemos tus datos de pago.</td>
+      <td>Ejecución del contrato de compra.</td>
+    </tr>
+    <tr>
+      <td>ML Kit (Google Play Services)</td>
+      <td>Escanear documentos y reconocer texto en el móvil.</td>
+      <td>Google puede recoger datos técnicos de uso (modelo y sistema del dispositivo, versión de la app, métricas de rendimiento y errores). No recibe las imágenes ni el texto. Más información: <a href="https://developers.google.com/ml-kit/terms">términos de ML Kit</a>.</td>
+      <td>Interés legítimo en que el escáner funcione correctamente.</td>
+    </tr>
+    <tr>
+      <td>Google Play Console (Android vitals)</td>
+      <td>Ver informes de fallos y rendimiento de la app.</td>
+      <td>Informes anónimos, solo si los tienes activados en tu dispositivo.</td>
+      <td>Interés legítimo en corregir errores.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Google actúa como responsable independiente de estos datos y los trata de acuerdo con su propia política: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Sobre cómo usa Google los datos de las apps de sus socios: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+
+<h2>4. Consentimiento para los anuncios</h2>
 <ul>
-<li><b>Cámara</b>: para escanear documentos y el DNI/NIE. Las imágenes no se envían a ningún servidor.</li>
-<li><b>Internet</b>: lo exige Google Play Billing para la compra de Copista Pro, y lo usan los servicios de Google indicados abajo.</li>
-<li><b>Biometría</b>: para abrir las carpetas cifradas. La app nunca recibe tu huella ni tu cara; solo el resultado de la comprobación que hace Android.</li>
+  <li>La primera vez que abres la versión gratuita, un aviso de Google te pregunta si aceptas los anuncios personalizados. Puedes aceptar, rechazar o elegir por finalidad.</li>
+  <li>Si aceptas los anuncios personalizados, Google usa estos datos para crear un perfil de tus intereses y elegir qué anuncios mostrarte. No se toma ninguna otra decisión automatizada que te afecte.</li>
+  <li>Si rechazas, puedes seguir usando la app entera. Los anuncios que veas no estarán personalizados, o serán anuncios limitados que no usan información de tu dispositivo.</li>
+  <li>Puedes cambiar tu decisión cuando quieras en <strong>Pro › Privacidad de los anuncios</strong>.</li>
+  <li>También puedes borrar o desactivar el ID de publicidad en los ajustes de Android (Privacidad › Anuncios).</li>
+  <li>Si compras Copista Pro, la app deja de mostrar anuncios y deja de iniciar el SDK de anuncios.</li>
 </ul>
 
-<h2>Servicios de Google</h2>
+<h2>5. ¿Es obligatorio dar estos datos?</h2>
+<p>No. Puedes usar todas las funciones de la app sin aceptar los anuncios personalizados, y con Copista Pro la app no envía ningún dato para anuncios.</p>
+
+<h2>6. Transferencias fuera de la UE</h2>
+<p>Google puede tratar datos en Estados Unidos y en otros países. Google está adherida al Marco de Privacidad de Datos UE-EE. UU. y utiliza las cláusulas contractuales tipo aprobadas por la Comisión Europea.</p>
+
+<h2>7. Conservación</h2>
+<p>Tus documentos se conservan en tu móvil hasta que los borres o desinstales la app. Nosotros no conservamos ningún dato tuyo, porque no lo recibimos. Los plazos de conservación de Google se describen en su política de privacidad.</p>
+
+<h2>8. Permisos de la app</h2>
 <ul>
-<li><b>ML Kit</b> (escáner de documentos y reconocimiento de texto) funciona en el dispositivo: tus imágenes y textos no salen del móvil. Google puede recoger datos técnicos de uso de ML Kit (modelo y sistema del dispositivo, versión de la app, un identificador por instalación, métricas de rendimiento y errores) para mantener el servicio. Estos datos viajan cifrados y no se usan para publicidad. Más información: <a href="https://developers.google.com/ml-kit/terms">términos de ML Kit</a>.</li>
-<li><b>Google Play Billing</b> gestiona la compra de Copista Pro. El pago lo procesa Google; Copista no recibe tus datos de pago. Consulta la <a href="https://policies.google.com/privacy">política de privacidad de Google</a>.</li>
-<li><b>Google Play Console</b> puede mostrarnos informes anónimos de fallos y rendimiento (Android vitals) si los tienes activados en tu dispositivo.</li>
+  <li><strong>Cámara:</strong> para fotografiar el DNI o NIE. El escáner de documentos usa su propia cámara, gestionada por Google Play Services.</li>
+  <li><strong>Huella o reconocimiento facial:</strong> para abrir las carpetas cifradas.</li>
+  <li><strong>Internet:</strong> para la compra de Pro con Google Play y para los anuncios de la versión gratuita. Nunca para enviar tus documentos.</li>
+  <li><strong>ID de publicidad:</strong> para los anuncios de la versión gratuita, según lo que hayas aceptado.</li>
 </ul>
 
-<h2>Lo que no hacemos</h2>
+<h2>9. Menores</h2>
+<p>Copista está dirigida a personas mayores de 18 años y no recoge datos de menores de forma consciente.</p>
+
+<h2>10. Tus derechos</h2>
+<p>Tienes derecho a acceder a tus datos, rectificarlos, suprimirlos, oponerte a su tratamiento, limitarlo, pedir su portabilidad y retirar tu consentimiento en cualquier momento. Como nosotros no recibimos datos personales tuyos, para los datos de los anuncios puedes ejercer estos derechos directamente ante Google o escribirnos a <a href="mailto:mydegollc@gmail.com">mydegollc@gmail.com</a> y te ayudaremos.</p>
+<p>Si crees que no se han respetado tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos: <a href="https://www.aepd.es">www.aepd.es</a>.</p>
+
+<h2>11. Lo que no hacemos</h2>
 <ul>
-<li>No usamos analítica ni publicidad de terceros.</li>
-<li>No usamos el ID de publicidad.</li>
-<li>No pedimos tu ubicación, contactos ni cuentas.</li>
+  <li>No vendemos tus datos.</li>
+  <li>No usamos analítica de terceros.</li>
+  <li>No pedimos tu ubicación precisa, tus contactos ni tus cuentas.</li>
 </ul>
 
-<h2>Menores</h2>
-<p>Copista no está dirigida a menores de 13 años.</p>
-
-<h2>Tus derechos</h2>
-<p>Como no guardamos datos tuyos en servidores propios, puedes borrar todo desde la app o desinstalándola. Para cualquier consulta sobre privacidad, o para ejercer tus derechos según el RGPD, escribe a <a href="mailto:mydegollc@gmail.com">mydegollc@gmail.com</a>.</p>
-
-<h2>Cambios</h2>
-<p>Si cambia esta política, publicaremos la nueva versión en esta página con su fecha.</p>
-
-<hr>
+<h2>12. Cambios</h2>
+<p>Si cambiamos esta política, publicaremos la nueva versión en esta página con su fecha. Si el cambio afecta a cómo se usan tus datos, te avisaremos en la app.</p>
+<hr style="margin:40px 0;border:0;border-top:1px solid var(--line)">
 <h1 id="en">Copista privacy policy (English)</h1>
-<p>Copista has no user accounts and no servers of its own. Scanned pages, recognised text, signatures and folders are stored only on your device, and leave it only when you share or export them. Encrypted folders use AES-256-GCM with an Android Keystore key unlocked by your fingerprint, face or PIN.</p>
-<p>The camera is used only to scan. Internet access is required by Google Play Billing for the Copista Pro purchase. ML Kit runs on the device; Google may collect technical usage data about ML Kit (device model and OS, app version, a per-installation identifier, performance metrics and errors), encrypted in transit and not used for advertising. Payments are processed by Google; we never receive your payment details. We use no third-party analytics or ads and no advertising ID.</p>
-<p>Contact: <a href="mailto:mydegollc@gmail.com">mydegollc@gmail.com</a>.</p>
+<p>Copista is published by F. Delgado (Mydego), 43710 Santa Oliva (Tarragona), Spain. Contact: <a href="mailto:mydegollc@gmail.com">mydegollc@gmail.com</a>.</p>
+<p>Copista has no user accounts and no servers of its own. Scanned pages, recognised text, signatures and folders are stored only on your device, and leave it only when you share or export them. Encrypted folders use AES-256-GCM with an Android Keystore key unlocked by your fingerprint, face or PIN. There are no cloud backups.</p>
+<p>The free version shows Google AdMob ads. To serve them, Google receives the advertising ID, IP address and the approximate location derived from it, device model and OS, language, ad interactions and SDK diagnostics, never your documents. Google's consent form asks whether you accept personalised ads; you can change your choice at any time in <strong>Pro › Privacidad de los anuncios</strong>, and use the app fully if you decline. Copista Pro removes ads and stops the ads SDK. Google acts as an independent controller: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+<p>ML Kit runs on the device; Google may collect technical usage data about it. Payments for Copista Pro are processed by Google Play; we never receive your payment details. Data may be transferred outside the EU under the EU-US Data Privacy Framework and standard contractual clauses.</p>
+<p>Copista is intended for adults (18+). You may exercise your GDPR rights by writing to us, and lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>).</p>
+</main>
 </body>
 </html>
